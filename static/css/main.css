@@ -135,6 +135,7 @@ main #about-us a {
   display: block;
   margin: 1.5rem 0;
   padding: 0.5rem 0;
+  border-radius: 15px;
   background-color: black;
   color: white;
 }
