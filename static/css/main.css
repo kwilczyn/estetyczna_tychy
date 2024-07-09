@@ -60,6 +60,7 @@ body {
 nav {
   position: fixed;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   width: 100%;
   justify-content: space-around;
@@ -68,11 +69,9 @@ nav {
   background-color: white;
   z-index: 100;
   min-height: 13rem;
-  transition: transform 250ms, min-height 300ms;
+  max-height: 13rem;
+  transition: transform 250ms, min-height 1000ms;
   box-shadow: 1px 2px 3px black;
-}
-nav #menu-buttons {
-  display: None;
 }
 nav #branding {
   display: flex;
@@ -84,6 +83,14 @@ nav #branding .logo-container {
 }
 nav #branding .logo-container .logo-container__logo {
   height: 100%;
+}
+nav #menu-buttons {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1000ms;
+}
+nav #menu-buttons.visible {
+  max-height: 20rem;
 }
 
 ul {
@@ -158,6 +165,7 @@ main #contact img {
 
 .maximize {
   min-height: 90vh;
+  max-height: none;
 }
 
 .slider {

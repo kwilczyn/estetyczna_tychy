@@ -74,6 +74,7 @@ body {
 nav {
   position: fixed;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
   width: 100%;
   justify-content: space-around;
@@ -82,11 +83,9 @@ nav {
   background-color: white;
   z-index: $zMenuLevel;
   min-height: 13rem;
-  transition: transform 250ms, min-height 300ms;
+  max-height: 13rem;
+  transition: transform 250ms, min-height 1000ms;
   box-shadow: 1px 2px 3px black;
-  #menu-buttons {
-    display: None;
-  }
   #branding {
     display: flex;
     flex-direction: column;
@@ -96,6 +95,14 @@ nav {
       .logo-container__logo {
         height: 100%;
       }
+    }
+  }
+  #menu-buttons {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1000ms;
+    &.visible {
+      max-height: 20rem;
     }
   }
 }
@@ -199,6 +206,7 @@ main {
 
 .maximize {
   min-height: 90vh;
+  max-height: none;
 }
 
 .slider {
