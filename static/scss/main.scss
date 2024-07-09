@@ -25,7 +25,7 @@ $zDropDownLevel: $zMenuLevel - 1;
   src: url(../MEDIA/FONTS/MONSPACT.TTF);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Cinzel&family=Cinzel+Decorative:wght@400;700;900&family=Kaisei+Decol&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Cinzel&family=Cinzel+Decorative:wght@400;700;900&family=Kaisei+Decol&display=swap");
 // $headerFont: "Aboreto";
 // $headerFont: "Xanh Mono";
 // $headerFont: "Asar";
@@ -37,7 +37,8 @@ body {
   font-family: "Baskervville SC";
 }
 
-h1, h2 {
+h1,
+h2 {
   // font-family: "MADE_Cannes";
   font-family: $headerFont;
   font-weight: 400;
@@ -71,9 +72,6 @@ body {
 }
 
 nav {
-  &::backdrop{
-    background-color: rgba(255, 255, 255, 0.5);
-  }
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -135,12 +133,12 @@ main {
     text-align: justify;
   }
 
-  @mixin black(){
+  @mixin black() {
     background-color: black;
     color: white;
   }
 
-  @mixin white(){
+  @mixin white() {
     color: black;
     background-color: white;
     border: solid 2px;
@@ -154,7 +152,8 @@ main {
       margin: 1.5rem 0;
       padding: 0.5rem 0;
       @include black();
-      &:hover, &:active {
+      &:hover,
+      &:active {
         filter: invert(75%);
       }
     }
