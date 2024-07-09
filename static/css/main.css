@@ -143,8 +143,9 @@ main #about-us a:hover, main #about-us a:active {
   filter: invert(75%);
 }
 main #about-us img {
-  width: 8rem;
+  width: 13rem;
   border-radius: 50%;
+  box-shadow: 2px 2px 10px 1px black;
 }
 main #pricing ul > ul > li {
   display: flex;
