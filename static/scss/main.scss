@@ -84,7 +84,7 @@ nav {
   z-index: $zMenuLevel;
   min-height: 13rem;
   max-height: 13rem;
-  transition: transform 250ms, min-height 1000ms;
+  transition: transform 250ms, min-height 500ms;
   box-shadow: 1px 2px 3px black;
   #branding {
     display: flex;
