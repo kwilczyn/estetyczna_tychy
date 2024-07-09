@@ -5,30 +5,7 @@ $zDropDownLevel: $zMenuLevel - 1;
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "MADE_Cannes";
-  src: url(../media/fonts/MADE\ Cannes\ PERSONAL\ USE.otf);
-}
-
-@font-face {
-  font-family: "MONOSPACB";
-  src: url(../MEDIA/FONTS/MONSPACB.TTF);
-}
-
-@font-face {
-  font-family: "MONOSPACN";
-  src: url(../MEDIA/FONTS/MONSPACN.TTF);
-}
-
-@font-face {
-  font-family: "MONOSPACT";
-  src: url(../MEDIA/FONTS/MONSPACT.TTF);
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Cinzel&family=Cinzel+Decorative:wght@400;700;900&family=Kaisei+Decol&display=swap");
-// $headerFont: "Aboreto";
-// $headerFont: "Xanh Mono";
-// $headerFont: "Asar";
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Cinzel:wght@400..900&display=swap");
 $headerFont: "Cinzel";
 
 html,
@@ -41,7 +18,9 @@ h1,
 h2 {
   // font-family: "MADE_Cannes";
   font-family: $headerFont;
-  font-weight: 400;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 h2 {
@@ -165,7 +144,7 @@ main {
 
   #about-us {
     a {
-      font-family: $headerFont;
+      @extend h1;
       display: block;
       margin: 1.5rem 0;
       padding: 0.5rem 0;

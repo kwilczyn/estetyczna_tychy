@@ -1,34 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Cinzel&family=Cinzel+Decorative:wght@400;700;900&family=Kaisei+Decol&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Cinzel:wght@400..900&display=swap");
 * {
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: "MADE_Cannes";
-  src: url(../media/fonts/MADE\ Cannes\ PERSONAL\ USE.otf);
-}
-@font-face {
-  font-family: "MONOSPACB";
-  src: url(../MEDIA/FONTS/MONSPACB.TTF);
-}
-@font-face {
-  font-family: "MONOSPACN";
-  src: url(../MEDIA/FONTS/MONSPACN.TTF);
-}
-@font-face {
-  font-family: "MONOSPACT";
-  src: url(../MEDIA/FONTS/MONSPACT.TTF);
-}
 html,
 body {
   height: 100%;
   font-family: "Baskervville SC";
 }
 
-h1,
+h1, main #about-us a,
 h2 {
   font-family: "Cinzel";
-  font-weight: 400;
+  font-weight: 600;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 h2 {
@@ -119,7 +105,7 @@ main {
   margin: 0 1rem;
   text-align: center;
 }
-main section h1 {
+main section h1, main section #about-us a, main #about-us section a {
   z-index: 1;
   font-size: 2rem;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgb(172, 172, 181) 50%, rgba(255, 255, 255, 0.5) 100%);
@@ -131,7 +117,6 @@ main p {
   text-align: justify;
 }
 main #about-us a {
-  font-family: "Cinzel";
   display: block;
   margin: 1.5rem 0;
   padding: 0.5rem 0;
