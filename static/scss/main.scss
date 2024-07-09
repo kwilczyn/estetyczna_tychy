@@ -214,9 +214,15 @@ main {
   width: 100%;
   height: 15rem;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 1px black;
   img {
-    top: 0;
     left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     position: absolute;
     width: 100%;
     opacity: 0;
