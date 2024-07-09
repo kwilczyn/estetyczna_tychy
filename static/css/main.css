@@ -42,6 +42,15 @@ body {
   align-items: center;
 }
 
+.backdrop {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+
 .nav-container {
   min-height: 13rem;
   width: 100%;
@@ -60,6 +69,9 @@ nav {
   min-height: 13rem;
   transition: transform 250ms, min-height 300ms;
   box-shadow: 1px 2px 3px black;
+}
+nav::backdrop {
+  background-color: rgba(255, 255, 255, 0.5);
 }
 nav #menu-buttons {
   display: None;
@@ -143,7 +155,7 @@ main #contact img {
 }
 
 .visible {
-  display: inline-block !important;
+  display: block !important;
 }
 
 .maximize {

@@ -5,6 +5,7 @@ let burgerMenu = document.querySelector("#burger-menu");
 let menuButtons = document.querySelector("#menu-buttons");
 let burgerLinks = document.querySelectorAll("#menu-buttons a");
 let isAnchorClick = false;
+let backdrop = document.querySelector(".backdrop");
 
 
 function getRootFontSize() {
@@ -47,11 +48,13 @@ document.addEventListener('click', function(e) {
 function maximizeBurger(){
     menuBar.classList.add("maximize");
     menuButtons.classList.add("visible");
+    backdrop.classList.add("visible");
 }
 
 function minimizeBurger(){
     menuBar.classList.remove("maximize");
     menuButtons.classList.remove("visible");
+    backdrop.classList.remove("visible");
 }
 
 function hideNav(){
@@ -72,6 +75,7 @@ function ToggleBurger(){
 }
 
 burgerMenu.addEventListener('click', ToggleBurger);
+backdrop.addEventListener('click', ToggleBurger);
 
 for (let i=0; i < burgerLinks.length; i++){
     console.log("JAJKO!")
