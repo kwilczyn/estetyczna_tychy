@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Akatab:wght@400;500;600;700;800;900&family=Cinzel&family=Cinzel+Decorative:wght@400;700;900&family=Kaisei+Decol&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MADE_Cannes";
+  src: url(../media/fonts/MADE\ Cannes\ PERSONAL\ USE.otf);
+}
+@font-face {
+  font-family: "MONOSPACB";
+  src: url(../MEDIA/FONTS/MONSPACB.TTF);
+}
+@font-face {
+  font-family: "MONOSPACN";
+  src: url(../MEDIA/FONTS/MONSPACN.TTF);
+}
+@font-face {
+  font-family: "MONOSPACT";
+  src: url(../MEDIA/FONTS/MONSPACT.TTF);
+}
+html,
+body {
+  height: 100%;
+  font-family: "Baskervville SC";
+}
+
+h1, h2 {
+  font-family: "Cinzel";
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-container {
+  min-height: 13rem;
+  width: 100%;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2rem;
+  background-color: white;
+  z-index: 100;
+  min-height: 13rem;
+  transition: transform 250ms, min-height 300ms;
+  box-shadow: 1px 2px 3px black;
+}
+nav #menu-buttons {
+  display: None;
+}
+nav #branding {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav #branding .logo-container {
+  height: 10rem;
+}
+nav #branding .logo-container .logo-container__logo {
+  height: 100%;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: None;
+  color: black;
+}
+
+main {
+  margin: 0 1rem;
+  text-align: center;
+}
+main section h1 {
+  z-index: 1;
+  font-size: 2rem;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0%, rgb(172, 172, 181) 50%, rgba(255, 255, 255, 0.5) 100%);
+  position: sticky;
+  top: 0;
+}
+main h3,
+main p {
+  text-align: justify;
+}
+main #about-us a {
+  font-family: "Cinzel";
+  display: block;
+  margin: 1.5rem 0;
+  padding: 0.5rem 0;
+  background-color: black;
+  color: white;
+}
+main #about-us a:hover, main #about-us a:active {
+  filter: invert(75%);
+}
+main #about-us img {
+  width: 8rem;
+  border-radius: 50%;
+}
+main #pricing ul > ul > li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main #contact {
+  text-align: center;
+}
+main #contact span {
+  text-align: justify;
+  display: inline-block;
+  margin: 0 0;
+}
+main #contact .address {
+  font-weight: bolder;
+}
+main #contact img {
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.hidden {
+  transform: translateY(-13rem);
+}
+
+.visible {
+  display: inline-block !important;
+}
+
+.maximize {
+  min-height: 90vh;
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 20rem;
+  text-align: center;
+}
+.slider img {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 500ms;
+  z-index: 0;
+}
+.slider .active {
+  opacity: 1;
+}
+
+footer {
+  width: 100%;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,14 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Medycyna Estetyczna Tychy</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="static/css/main.css">
-    </head>
-    <body>
-        
-        <script src="" async defer></script>
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Medycyna Estetyczna Tychy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="static/css/main.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="nav-container">
+        <nav>
+            <div id="branding">
+                <div class="logo-container">
+                    <img class="logo-container__logo" src="static/media/images/LogoBG_embedded.svg">
+                </div>
+                <div id="burger-menu">
+                    <svg width="40" height="40" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100" height="10" rx="8"></rect>
+                        <rect y="30" width="100" height="10" rx="8"></rect>
+                        <rect y="60" width="100" height="10" rx="8"></rect>
+                    </svg>
+                </div>
+            </div>
+            <div id="menu-buttons">
+                <ul>
+                    <li><a href="#about-us">O nas</a></li>
+                    <li><a href="#opinions">Opinie</a></li>
+                    <li><a href="#certificates">Certyfikaty</a></li>
+                    <li><a href="#pricing">Cennik</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                    <li><a href="#order">Rezerwuj</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <main>
+        <section id="about-us">
+            <h1>O nas</h1>
+        </section>
+        <section id="opinions">
+            <h1>Opinie</h1>
+        </section>
+        <section id="certificates">
+            <h1>Certyfikaty</h1>
+        </section>
+        <section id="pricing">
+            <h1>Cennik</h1>
+        </section>
+        <section id="contact">
+            <h1>Kontakt</h1>
+            <div class="map-container" style="width:100%">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d705.1789944802654!2d18.987374595317004!3d50.10216032637517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716b7f7c643351d%3A0x4820d5ea4f13745d!2sTo%C5%82stoja%2062%2C%2043-110%20Tychy!5e0!3m2!1spl!2spl!4v1720480230203!5m2!1spl!2spl" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+        <section id="order">
+            <h1>Rezerwacje</h1>
+            <a id="zl-url" class="zl-url" href="https://www.znanylekarz.pl/marta-tomica/lekarze-wykonujacy-zabiegi-medycyny-estetycznej/tychy" rel="nofollow" data-zlw-doctor="marta-tomica" data-zlw-type="big_with_calendar" data-zlw-opinion="false" data-zlw-hide-branding="true" data-zlw-saas-only="true">Marta Tomica - ZnanyLekarz.pl</a><script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
+        </section>
+    </main>
+    <footer>FOOTER
+        <!-- <a>Przygotowanie do zabiegu</a>
+        <a>Zalecenia pozabiegowe</a>
+        <a>Polityka prywatności</a> -->
+    </footer>
+    <script src="static/js/main.js" async defer></script>
+    <script src="static/js/menuScroll.js" async defer></script>
+    <script src="static/js/slider.js" async defer></script>
+  </body>
 </html>

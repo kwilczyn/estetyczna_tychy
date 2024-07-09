@@ -1,0 +1,90 @@
+{
+    "about_us": [
+      {
+        "doctor": "Lek. Barbara Giżycka",
+        "description": "Specjalistka medycyny estetycznej z 10-letnim doświadczeniem. Ekspertka w zabiegach z użyciem toksyny botulinowej, kwasu hialuronowego i bioregeneratorów. Skupiam się na naturalnych efektach, zdrowej skórze i profilaktyce przeciwstarzeniowej. Stale rozwijam swoje umiejętności, uczestnicząc w międzynarodowych kongresach i kursach. Jako radiolog specjalizuję się w diagnostyce różnych układów organizmu. Moje zainteresowania sztuką i naturą pomagają mi w holistycznym podejściu do pacjentów.",
+        "image": "barbara.png"
+      },
+      {
+        "doctor": "Lek. Marta Tomica",
+        "description": "Dr Anna Kowalska jest cenionym specjalistą medycyny estetycznej z 15-letnim doświadczeniem. Ukończyła studia medyczne na Uniwersytecie Medycznym w Warszawie, a następnie odbyła specjalizację z dermatologii. Swoją praktykę w zakresie medycyny estetycznej rozpoczęła w 2008 roku, systematycznie poszerzając wiedzę poprzez uczestnictwo w międzynarodowych konferencjach i szkoleniach. Dr Kowalska jest ekspertem w dziedzinie zabiegów anti-aging, modelowania twarzy i ciała oraz laseroterapii. Prowadzi własną klinikę w centrum Krakowa, gdzie wprowadza najnowocześniejsze technologie i metody leczenia. Jest również aktywnym członkiem Polskiego Towarzystwa Medycyny Estetycznej i Anti-Aging.",
+        "image": "doc2.png"
+      }
+    ],
+    "pricing": [
+        {
+          "category": "Zabiegi z użyciem toksyny botulinowej",
+          "services": [
+            {
+              "name": "Botoks - zmarszczki mimiczne czoła",
+              "price": "450 zł"
+            },
+            {
+              "name": "Botoks - kurze łapki",
+              "price": "500 zł"
+            },
+            {
+              "name": "Botoks - bruzdy nosowo-wargowe",
+              "price": "600 zł"
+            }
+          ]
+        },
+        {
+          "category": "Wypełniacze",
+          "services": [
+            {
+              "name": "Wypełnianie ust kwasem hialuronowym",
+              "price": "800 zł"
+            },
+            {
+              "name": "Wypełnianie bruzd nosowo-wargowych",
+              "price": "900 zł"
+            },
+            {
+              "name": "Modelowanie policzków",
+              "price": "1200 zł"
+            }
+          ]
+        },
+        {
+          "category": "Mezoterapia",
+          "services": [
+            {
+              "name": "Mezoterapia igłowa twarzy",
+              "price": "350 zł"
+            },
+            {
+              "name": "Mezoterapia igłowa skóry głowy",
+              "price": "400 zł"
+            },
+            {
+              "name": "Mezoterapia bezigłowa",
+              "price": "250 zł"
+            }
+          ]
+        },
+        {
+          "category": "Peelingi medyczne",
+          "services": [
+            {
+              "name": "Peeling migdałowy",
+              "price": "200 zł"
+            },
+            {
+              "name": "Peeling glikolowy",
+              "price": "250 zł"
+            },
+            {
+              "name": "Peeling salicylowy",
+              "price": "220 zł"
+            }
+          ]
+        }
+      ],
+      "contact": {
+        "address": "ul. Tołstoja 62, 43-100 Tychy",
+        "tips": "Gabinet znajduje się na parterze wieżowca przy ulicy Tołstoja 62. Wejście znajduje się od strony parkingu, po schodkach.",
+        "parking": "Do dyspozycji pacjentów jest parking na przeciwko gabinetu oraz miejsca parkingowe wzdłuż ulicy Tołstoja.",
+        "image": "wejscie2.png"
+      }
+  }
