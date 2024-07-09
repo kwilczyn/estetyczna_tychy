@@ -70,7 +70,7 @@ nav {
   z-index: 100;
   min-height: 13rem;
   max-height: 13rem;
-  transition: transform 250ms, min-height 1000ms;
+  transition: transform 250ms, min-height 500ms;
   box-shadow: 1px 2px 3px black;
 }
 nav #branding {
@@ -171,12 +171,18 @@ main #contact img {
 .slider {
   position: relative;
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  box-shadow: 1px 1px 5px 1px black;
 }
 .slider img {
-  top: 0;
   left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   position: absolute;
   width: 100%;
   opacity: 0;
