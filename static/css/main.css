@@ -15,6 +15,7 @@ h2 {
   font-weight: 600;
   font-optical-sizing: auto;
   font-style: normal;
+  margin: 0;
 }
 
 h2 {
@@ -24,6 +25,7 @@ h2 {
 body {
   margin: 0;
   display: flex;
+  gap: 2rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
@@ -102,10 +104,21 @@ a {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   margin: 0 1rem;
   text-align: center;
 }
+main section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 main section h1, main section #about-us a, main #about-us section a {
+  margin: 0;
+  align-self: stretch;
   z-index: 1;
   font-size: 2rem;
   background: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgb(172, 172, 181) 50%, rgba(255, 255, 255, 0.8) 100%);
@@ -114,11 +127,13 @@ main section h1, main section #about-us a, main #about-us section a {
 }
 main h3,
 main p {
+  margin: 0;
   text-align: justify;
 }
 main #about-us a {
+  align-self: stretch;
   display: block;
-  margin: 1.5rem 0;
+  margin: 0;
   padding: 0.5rem 0;
   border-radius: 15px;
   background-color: black;
@@ -131,6 +146,14 @@ main #about-us img {
   width: 13rem;
   border-radius: 50%;
   box-shadow: 2px 2px 10px 1px black;
+}
+main #pricing h2 {
+  margin-bottom: 1rem;
+}
+main #pricing > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 main #pricing ul > ul > li {
   display: flex;
@@ -149,7 +172,6 @@ main #contact .address {
   font-weight: bolder;
 }
 main #contact img {
-  margin-top: 1.5rem;
   width: 100%;
 }
 
@@ -171,8 +193,6 @@ main #contact img {
   width: 100%;
   height: 15rem;
   text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
   overflow: hidden;
   box-shadow: 1px 1px 5px 1px black;
 }
@@ -192,7 +212,6 @@ main #contact img {
 }
 
 footer {
-  margin-top: 2rem;
   width: 100%;
   color: white;
   background-color: black;
