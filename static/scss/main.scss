@@ -89,6 +89,13 @@ nav {
       position: absolute;
       top: 1rem;
       right: 0;
+      svg {
+        width: 120px;
+        height: 120px;
+        circle {
+          fill: $majorColor;
+        }
+      }
     }
   }
   #menu-buttons {
