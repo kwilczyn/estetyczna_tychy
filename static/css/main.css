@@ -7,6 +7,8 @@ html,
 body {
   height: 100%;
   font-family: "Baskervville SC";
+  background-color: rgb(216, 160, 166);
+  margin: 0;
 }
 
 h1, main #about-us a,
@@ -22,7 +24,8 @@ h2 {
   font-size: 1.5rem;
 }
 
-body {
+.page-container {
+  background-color: white;
   margin: 0;
   display: flex;
   gap: 2rem;
@@ -104,6 +107,7 @@ a {
 }
 
 main {
+  background-color: white;
   display: flex;
   flex-direction: column;
   gap: 2rem;
