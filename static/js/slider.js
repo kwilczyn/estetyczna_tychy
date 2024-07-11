@@ -28,7 +28,6 @@ function create_slider(parent, images) {
     sliderContainer.appendChild(image);
   }
   slideShow(sliderContainer);
-  console.log("polazłem sobie!");
 }
 
 function slideShow(slider) {
