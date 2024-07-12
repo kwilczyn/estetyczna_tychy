@@ -1,6 +1,7 @@
 $zMenuLevel: 100;
 $zDropDownLevel: $zMenuLevel - 1;
 $majorColor: rgb(216, 160, 166);
+$sliderHeight: 15rem;
 
 * {
   box-sizing: border-box;
@@ -165,7 +166,11 @@ main {
   }
 
   #prolog {
+    position: relative;
+    min-width: 100%;
+    min-height: $sliderHeight;
     .slider {
+      position: absolute;
       width: 100vw;
       box-shadow: none;
     }
@@ -229,7 +234,7 @@ main {
 .slider {
   position: relative;
   width: 100%;
-  height: 15rem;
+  height: $sliderHeight;
   text-align: center;
   overflow: hidden;
   box-shadow: 1px 1px 5px 1px black;

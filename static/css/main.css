@@ -141,7 +141,13 @@ main p {
   margin: 0;
   text-align: justify;
 }
+main #prolog {
+  position: relative;
+  min-width: 100%;
+  min-height: 15rem;
+}
 main #prolog .slider {
+  position: absolute;
   width: 100vw;
   box-shadow: none;
 }
