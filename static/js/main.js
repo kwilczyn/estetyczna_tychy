@@ -18,7 +18,6 @@ function about_us(data) {
     );
     prepare_element("#about-us", "h2", data[i].doctor);
     prepare_element("#about-us", "p", data[i].description);
-    prepare_element("#about-us", "a", "Więcej...");
   }
 }
 
