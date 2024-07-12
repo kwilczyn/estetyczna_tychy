@@ -164,6 +164,13 @@ main {
     box-shadow: 2px 2px 15px 1px black;
   }
 
+  #prolog {
+    .slider {
+      width: 100vw;
+      box-shadow: none;
+    }
+  }
+
   #about-us {
     & > img {
       width: 13rem;

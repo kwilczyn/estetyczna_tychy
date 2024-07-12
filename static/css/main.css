@@ -141,6 +141,10 @@ main p {
   margin: 0;
   text-align: justify;
 }
+main #prolog .slider {
+  width: 100vw;
+  box-shadow: none;
+}
 main #about-us > img {
   width: 13rem;
   border-radius: 50%;
