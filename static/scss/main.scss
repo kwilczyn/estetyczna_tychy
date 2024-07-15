@@ -1,7 +1,15 @@
 $zMenuLevel: 100;
 $zDropDownLevel: $zMenuLevel - 1;
 $majorColor: rgb(216, 160, 166);
+$mainMargin: 1rem;
 $sliderHeight: 15rem;
+$sectionGap: 2rem;
+// tablet
+$tabletTriggerS: 420px;
+$tabletTriggerL: 768px;
+// desktop
+$fullHDPageWidth: 1200px;
+$desktopTrigger: 992px;
 
 * {
   box-sizing: border-box;
@@ -16,6 +24,13 @@ body {
   font-family: "Baskervville SC";
   background-color: $majorColor;
   margin: 0;
+  @media (min-width: $desktopTrigger) {
+    margin: 0 auto;
+    max-width: $fullHDPageWidth;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 h1,
@@ -35,10 +50,13 @@ h2 {
   background-color: white;
   margin: 0;
   display: flex;
-  gap: 2rem;
+  gap: $sectionGap;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  @media (min-width: $desktopTrigger) {
+    box-shadow: 1px 1px 20px 0px black;
+  }
 }
 
 .backdrop {
@@ -53,6 +71,9 @@ h2 {
 .nav-container {
   min-height: 9rem;
   width: 100%;
+  @media (min-width: $desktopTrigger) {
+    min-height: 6rem;
+  }
 }
 
 nav {
@@ -60,8 +81,8 @@ nav {
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  width: 100%;
-  justify-content: space-evenly;
+  width: 100vw;
+  justify-content: space-between;
   align-items: center;
   font-size: 2rem;
   background-color: white;
@@ -77,10 +98,9 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    height: 9rem;
     .logo-container {
-      position: absolute;
-      top: -2rem;
-      left: -1rem;
+      position: relative;
       height: 13rem;
       .logo-container__logo {
         height: 100%;
@@ -98,6 +118,18 @@ nav {
         }
       }
     }
+    @media (min-width: $desktopTrigger) {
+      min-width: 10%;
+      .logo-container {
+        top: none;
+        left: none;
+        position: relative;
+        height: 6rem;
+        .logo-container__logo {
+          position: absolute;
+        }
+      }
+    }
   }
   #menu-buttons {
     max-height: 0;
@@ -105,6 +137,31 @@ nav {
     transition: max-height 1000ms;
     &.visible {
       max-height: 20rem;
+      margin-bottom: 7rem;
+    }
+  }
+  @media (min-width: $desktopTrigger) {
+    min-height: 6rem;
+    max-height: 6rem;
+    flex-direction: row;
+    justify-content: flex-end;
+    max-width: $fullHDPageWidth;
+    #branding {
+      width: auto;
+    }
+    #burger-menu {
+      display: none;
+    }
+    #menu-buttons {
+      max-height: none;
+      margin-right: 2rem;
+      width: 85%;
+      ul {
+        display: flex;
+        flex-direction: row;
+        gap: 1.3rem;
+        justify-content: flex-end;
+      }
     }
   }
 }
@@ -124,7 +181,7 @@ main {
   background-color: white;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: $sectionGap;
   margin: 0 1rem;
   text-align: center;
   section {
@@ -168,7 +225,8 @@ main {
   #prolog {
     position: relative;
     min-width: 100%;
-    min-height: $sliderHeight;
+    min-height: min(calc(100vw / 1.61), $fullHDPageWidth / 1.61);
+    max-height: calc($fullHDPageWidth / 1.61);
     .slider {
       position: absolute;
       width: 100vw;
@@ -177,22 +235,62 @@ main {
   }
 
   #about-us {
-    & > img {
-      width: 13rem;
-      border-radius: 50%;
-      box-shadow: 2px 2px 10px 1px black;
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+
+      & > img {
+        width: 13rem;
+        border-radius: 50%;
+        box-shadow: 2px 2px 10px 1px black;
+      }
+    }
+    @media (min-width: $tabletTriggerL) {
+      margin: 0 1rem;
+      .hero {
+        flex-direction: row;
+        padding: 1rem;
+        h2 {
+          padding: 1rem;
+        }
+
+        & > img {
+          border-radius: 50%;
+          box-shadow: none;
+        }
+      }
+      .hero:nth-of-type(2n) {
+        flex-direction: row-reverse;
+        background: linear-gradient(
+          90deg,
+          rgba(255, 255, 255, 1) 0%,
+          rgb(227, 226, 226) 50%,
+          rgba(255, 255, 255, 1) 100%
+        );
+      }
+    }
+  }
+
+  #opinions {
+    .slider {
+      aspect-ratio: 12/6;
     }
   }
 
   #pricing {
     h2 {
       margin-bottom: 1rem;
+      width: 100%;
     }
 
     & > ul {
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      justify-content: stretch;
+      min-width: 100%;
     }
 
     ul > ul > li {
@@ -200,10 +298,34 @@ main {
       flex-direction: row;
       justify-content: space-between;
     }
+
+    li:nth-of-type(2n) {
+      background-color: rgb(242, 242, 242);
+    }
+
+    @media (min-width: $tabletTriggerS) {
+      & > ul {
+        padding: 0 5rem;
+      }
+    }
   }
 
   #contact {
     text-align: center;
+    width: 100%;
+    .map-container iframe {
+      width: 100%;
+      height: 20rem;
+    }
+
+    .data-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+      max-width: 40rem;
+    }
+
     span {
       text-align: justify;
       display: inline-block;
@@ -214,6 +336,8 @@ main {
     }
     img {
       width: 100%;
+      border-radius: 10px;
+      max-width: 40rem;
     }
   }
 }
@@ -234,10 +358,12 @@ main {
 .slider {
   position: relative;
   width: 100%;
-  height: $sliderHeight;
+  max-width: $fullHDPageWidth;
+  aspect-ratio: 161/100;
   text-align: center;
   overflow: hidden;
-  box-shadow: 1px 1px 5px 1px black;
+  box-shadow: 0 0 4px 1px black;
+  border-radius: 10px;
   img {
     left: 0;
     right: 0;

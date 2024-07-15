@@ -13,12 +13,14 @@ fetch("static/media/text/main.json")
 
 function about_us(data) {
   for (let i = 0; i < data.length; i++) {
-    prepare_element("#about-us", "img", null).setAttribute(
+    hero = prepare_element("#about-us", "div", null);
+    hero.classList.add("hero");
+    prepare_element(hero, "img", null).setAttribute(
       "src",
       `${imagePath}${data[i].image}`
     );
-    prepare_element("#about-us", "h2", data[i].doctor);
-    prepare_element("#about-us", "p", data[i].description);
+    prepare_element(hero, "h2", data[i].doctor);
+    prepare_element(hero, "p", data[i].description);
   }
 }
 
@@ -41,16 +43,21 @@ function pricing(data) {
 }
 
 function contact(data) {
-  prepare_element("#contact", "h2", "Adres");
-  prepare_element("#contact", "span", data.address).classList.add("address");
-  prepare_element("#contact", "h2", "Jak dojadę?");
-  prepare_element("#contact", "span", data.tips).classList.add("tips");
+  data_container = prepare_element("#contact", "div", null);
+  data_container.classList.add("data-container");
+  address = prepare_element(data_container, "article", null);
+  prepare_element(address, "h2", "Adres");
+  prepare_element(address, "span", data.address).classList.add("address");
+  how_to_get = prepare_element(data_container, "article", null);
+  prepare_element(how_to_get, "h2", "Jak dojadę?");
+  prepare_element(how_to_get, "span", data.tips).classList.add("tips");
+  parking = prepare_element(data_container, "article", null);
+  prepare_element(parking, "h2", "Parking");
+  prepare_element(parking, "span", data.parking).classList.add("parking");
   prepare_element("#contact", "img", null).setAttribute(
     "src",
     `${imagePath}${data.image}`
   );
-  prepare_element("#contact", "h2", "Parking");
-  prepare_element("#contact", "span", data.parking).classList.add("parking");
 }
 
 function footer(data) {
