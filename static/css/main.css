@@ -212,6 +212,7 @@ main #prolog .slider {
   position: absolute;
   width: 100vw;
   box-shadow: none;
+  border-radius: 0;
 }
 main #about-us .hero {
   display: flex;
