@@ -54,10 +54,9 @@ function contact(data) {
   parking = prepare_element(data_container, "article", null);
   prepare_element(parking, "h2", "Parking");
   prepare_element(parking, "span", data.parking).classList.add("parking");
-  prepare_element("#contact", "img", null).setAttribute(
-    "src",
-    `${imagePath}${data.image}`
-  );
+  entrance_image = prepare_element("#contact", "img", null);
+  entrance_image.setAttribute("src", `${imagePath}${data.image}`);
+  entrance_image.setAttribute("load", "lazy");
 }
 
 function footer(data) {
