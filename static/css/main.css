@@ -141,25 +141,38 @@ nav #menu-buttons.visible {
     min-height: 6rem;
     max-height: 6rem;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     max-width: 1200px;
   }
   nav #branding {
     width: auto;
+    margin-right: 0;
   }
   nav #burger-menu {
     display: none;
   }
   nav #menu-buttons {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
     max-height: none;
-    margin-right: 2rem;
-    width: 85%;
+    margin-right: 1rem;
+  }
+  nav #menu-buttons a {
+    padding: 0.5rem;
+    white-space: nowrap;
+  }
+  nav #menu-buttons a:hover,
+  nav #menu-buttons a:active {
+    color: white;
+    background-color: rgb(216, 160, 166);
+    border-radius: 5px;
   }
   nav #menu-buttons ul {
     display: flex;
     flex-direction: row;
-    gap: 1.3rem;
     justify-content: flex-end;
+    gap: 0.4rem;
   }
 }
 
