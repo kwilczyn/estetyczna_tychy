@@ -13,9 +13,9 @@ const imageDirectories = {
     "about4.jpg",
     "about5.jpg",
     "about7.jpg",
-    "gab1.jpeg",
-    "gab2.jpeg",
-    "gab3.jpeg",
+    "gab1.webp",
+    "gab2.webp",
+    "gab3.webp",
   ],
 };
 
