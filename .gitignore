@@ -3,3 +3,7 @@ run_server.py
 pub.py
 *.pages
 .DS_Store
+node_modules
+dist
+materials
+__pycache__
