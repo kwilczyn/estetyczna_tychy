@@ -1,7 +1,7 @@
 let certificatesSection = document.querySelector("#certificates");
 let opinionsSection = document.querySelector("#opinions");
 let prologSection = document.querySelector("#prolog");
-let mediaRoot = "static/media/images/";
+let mediaRoot = "/media/images/";
 
 const imageDirectories = {
   certificates: ["cert1.jpeg", "cert2.jpeg", "cert3.jpeg"],
@@ -26,7 +26,7 @@ function read_images(dir) {
 }
 
 function create_slider(parent, images) {
-  sliderContainer = document.createElement("div");
+  let sliderContainer = document.createElement("div");
   sliderContainer.classList.add("slider");
   parent.appendChild(sliderContainer);
   for (let i = 0; i < images.length; i++) {

@@ -1,6 +1,6 @@
-let imagePath = "static/media/images/";
+let imagePath = "/media/images/";
 
-fetch("static/media/text/main.json")
+fetch("/media/text/main.json")
   .then((response) => {
     return response.json();
   })
@@ -13,7 +13,7 @@ fetch("static/media/text/main.json")
 
 function about_us(data) {
   for (let i = 0; i < data.length; i++) {
-    hero = prepare_element("#about-us", "div", null);
+    let hero = prepare_element("#about-us", "div", null);
     hero.classList.add("hero");
     prepare_element(hero, "img", null).setAttribute(
       "src",
@@ -43,18 +43,18 @@ function pricing(data) {
 }
 
 function contact(data) {
-  data_container = prepare_element("#contact", "div", null);
+  let data_container = prepare_element("#contact", "div", null);
   data_container.classList.add("data-container");
-  address = prepare_element(data_container, "article", null);
+  let address = prepare_element(data_container, "article", null);
   prepare_element(address, "h2", "Adres");
   prepare_element(address, "span", data.address).classList.add("address");
-  how_to_get = prepare_element(data_container, "article", null);
+  let how_to_get = prepare_element(data_container, "article", null);
   prepare_element(how_to_get, "h2", "Jak dojadę?");
   prepare_element(how_to_get, "span", data.tips).classList.add("tips");
-  parking = prepare_element(data_container, "article", null);
+  let parking = prepare_element(data_container, "article", null);
   prepare_element(parking, "h2", "Parking");
   prepare_element(parking, "span", data.parking).classList.add("parking");
-  entrance_image = prepare_element("#contact", "img", null);
+  let entrance_image = prepare_element("#contact", "img", null);
   entrance_image.setAttribute("src", `${imagePath}${data.image}`);
   entrance_image.setAttribute("load", "lazy");
 }
@@ -68,7 +68,7 @@ function footer(data) {
     "https://www.facebook.com/Estetyczna.tychy"
   );
   let facebook_image = prepare_element(facebook_link, "img", null);
-  facebook_image.setAttribute("src", `${mediaRoot}facebook.png`);
+  facebook_image.setAttribute("src", `${imagePath}facebook.png`);
   let instagram_link = prepare_element(social_media, "a", null);
   instagram_link.setAttribute(
     "href",
@@ -76,7 +76,7 @@ function footer(data) {
   );
   prepare_element(instagram_link, "img", null).setAttribute(
     "src",
-    `${mediaRoot}instagram.png`
+    `${imagePath}instagram.png`
   );
 }
 
