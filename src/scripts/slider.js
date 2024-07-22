@@ -1,7 +1,7 @@
 let certificatesSection = document.querySelector("#certificates");
 let opinionsSection = document.querySelector("#opinions");
 let prologSection = document.querySelector("#prolog");
-let mediaRoot = "/media/images/";
+let mediaRoot = "./media/images/";
 
 const imageDirectories = {
   certificates: ["cert1.jpeg", "cert2.jpeg", "cert3.jpeg"],

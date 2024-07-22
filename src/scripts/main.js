@@ -1,6 +1,6 @@
 import "@styles/scss/main.scss";
 
-let imagePath = "/media/images/";
+let imagePath = "./media/images/";
 
 fetch("/media/text/main.json")
   .then((response) => {
