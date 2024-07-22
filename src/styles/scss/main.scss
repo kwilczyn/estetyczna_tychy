@@ -163,6 +163,7 @@ nav {
         padding: 0.5rem;
         white-space: nowrap;
         background-color: white;
+        transition: background-color 500ms;
       }
       a:hover,
       a:active {
