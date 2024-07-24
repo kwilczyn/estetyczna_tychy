@@ -1,6 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
 
-const BASE_URL = "http://localhost:5173";
+const BASE_URL = process.env.DEPLOYMENT_URL ?? "http://localhost:5173";
 
 export default defineConfig({
   // Look for test files in the "tests" directory, relative to this configuration file.
