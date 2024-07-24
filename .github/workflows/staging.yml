@@ -32,6 +32,8 @@ jobs:
       url: ${{steps.deployment.outputs.page_url}}
     runs-on: ubuntu-latest
     needs: build
+    outputs:
+      deployment_url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
@@ -39,6 +41,9 @@ jobs:
 
   E2E:
     runs-on: ubuntu-latest
+    needs: deploy
+    env:
+      DEPLOYMENT_URL: ${{ needs.deploy.outputs.deployment_url }}
     steps:
-      -name: Run E2E tests
-      run: npm run test:e2e
+      - name: Run E2E tests
+        run: npm run test:e2e
