@@ -36,3 +36,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+
+  E2E:
+    runs-on: ubuntu-latest
+    steps:
+      -name: Run E2E tests
+      run: npm run test:e2e
