@@ -8,7 +8,9 @@
   },
   "scripts": {
     "dev": "vite --host",
-    "test": "vitest",
+    "test:unit": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -28,5 +30,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "dependencies": {
+    "@playwright/test": "^1.45.3",
+    "playwright": "^1.45.3"
   }
 }

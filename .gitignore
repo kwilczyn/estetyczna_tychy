@@ -9,3 +9,5 @@ materials
 __pycache__
 .vite
 .vscode
+playwright-report
+test-results
