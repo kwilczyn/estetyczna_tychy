@@ -34,6 +34,8 @@ jobs:
             ${{ runner.os }}-
       - name: Install dependencies
         run: npm install
+      - name: Run Unit Tests
+        run: npm run test:unit
       - name: Build the page using Vite
         run: npm run build
       - name: Upload Artifact
