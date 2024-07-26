@@ -98,6 +98,7 @@ export const MenuScroll = (function () {
   // Public API
   return {
     initialize,
+    getRootFontSize,
     maximizeBurger,
     minimizeBurger,
     toggleBurger,
