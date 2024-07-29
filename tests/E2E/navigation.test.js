@@ -12,14 +12,13 @@ test("shows nav bar", async ({ page }) => {
 
 test("nav bar disappears after scrolling down", async ({ page }) => {
   await page.goto("./index.html");
-
-  await page.mouse.wheel(0, 500);
+  await page.evaluate(() => window.scrollTo(0, 500));
   await expect(page.getByRole("navigation")).not.toBeInViewport();
 });
 
 test("nav bar appears after scrolling up", async ({ page }) => {
   await page.goto("./index.html");
-  await page.mouse.wheel(0, 500);
-  await page.mouse.wheel(0, -500);
+  await page.evaluate(() => window.scrollTo(0, 500));
+  await page.evaluate(() => window.scrollTo(0, -500));
   await expect(page.getByRole("navigation")).toBeInViewport();
 });

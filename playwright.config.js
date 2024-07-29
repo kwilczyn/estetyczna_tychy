@@ -28,4 +28,22 @@ export default defineConfig({
     baseURL: BASE_URL,
     trace: "on",
   },
+
+  projects: [
+    {
+      name: "desktop",
+      use: { ...devices["Desktop Chrome"], isMobile: false },
+    },
+    {
+      name: "mobile",
+      use: { ...devices["iPhone SE"], viewport: { width: 375, height: 667 } },
+    },
+    {
+      name: "tablet",
+      use: {
+        ...devices["iPad Air portrait"],
+        viewport: { width: 820, height: 1180 },
+      },
+    },
+  ],
 });
