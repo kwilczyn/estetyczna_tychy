@@ -1,12 +1,12 @@
-export const MenuScroll = (function () {
-  let state = {
+export const MenuScroll = {
+  state: {
     lastScrollTop: 0,
     isAnchorClick: false,
     elements: {},
-  };
+  },
 
-  function initializeDOMElements() {
-    state.elements = {
+  initializeDOMElements: function () {
+    this.state.elements = {
       menuBarContainer: document.querySelector(".nav-container"),
       menuBar: document.querySelector("nav"),
       burgerMenu: document.querySelector("#burger-menu"),
@@ -14,100 +14,97 @@ export const MenuScroll = (function () {
       burgerLinks: document.querySelectorAll("#menu-buttons a"),
       backdrop: document.querySelector(".backdrop"),
     };
-  }
+  },
 
-  function getRootFontSize() {
+  getRootFontSize: function () {
     const root = document.documentElement;
     const rootFontSize = window.getComputedStyle(root).fontSize;
     return parseFloat(rootFontSize);
-  }
+  },
 
-  function maximizeBurger() {
-    state.elements.menuBar?.classList.add("maximize");
-    state.elements.menuButtons?.classList.add("visible");
-    state.elements.backdrop?.classList.add("visible");
-  }
+  maximizeBurger: function () {
+    this.state.elements.menuBar?.classList.add("maximize");
+    this.state.elements.menuButtons?.classList.add("visible");
+    this.state.elements.backdrop?.classList.add("visible");
+  },
 
-  function minimizeBurger() {
-    state.elements.menuBar?.classList.remove("maximize");
-    state.elements.menuButtons?.classList.remove("visible");
-    state.elements.backdrop?.classList.remove("visible");
-  }
+  minimizeBurger: function () {
+    this.state.elements.menuBar?.classList.remove("maximize");
+    this.state.elements.menuButtons?.classList.remove("visible");
+    this.state.elements.backdrop?.classList.remove("visible");
+  },
 
-  function hideNav() {
-    minimizeBurger();
-    state.elements.menuBar?.classList.add("hidden");
-  }
+  hideNav: function () {
+    this.minimizeBurger();
+    this.state.elements.menuBar?.classList.add("hidden");
+  },
 
-  function showNav() {
-    state.elements.menuBar?.classList.remove("hidden");
-  }
+  showNav: function () {
+    this.state.elements.menuBar?.classList.remove("hidden");
+  },
 
-  function toggleBurger() {
-    if (state.elements.menuBar?.classList.contains("maximize")) {
-      minimizeBurger();
+  toggleBurger: function () {
+    if (this.state.elements.menuBar?.classList.contains("maximize")) {
+      this.minimizeBurger();
     } else {
-      maximizeBurger();
+      this.maximizeBurger();
     }
-  }
+  },
 
-  function setupEventListeners() {
-    window.addEventListener("scroll", handleScroll, false);
-    document.addEventListener("click", handleAnchorClick);
-    state.elements.burgerMenu?.addEventListener("click", toggleBurger);
-    state.elements.backdrop?.addEventListener("click", toggleBurger);
-    state.elements.burgerLinks?.forEach((link) =>
-      link.addEventListener("click", hideNav)
+  setupEventListeners: function () {
+    window.addEventListener(
+      "scroll",
+      this.handleScroll.bind(MenuScroll),
+      false
     );
-  }
+    document.addEventListener("click", this.handleAnchorClick.bind(MenuScroll));
+    this.state.elements.burgerMenu?.addEventListener(
+      "click",
+      this.toggleBurger.bind(MenuScroll)
+    );
+    this.state.elements.backdrop?.addEventListener(
+      "click",
+      this.toggleBurger.bind(MenuScroll)
+    );
+    this.state.elements.burgerLinks?.forEach((link) =>
+      link.addEventListener("click", this.hideNav.bind(MenuScroll))
+    );
+  },
 
-  function handleScroll() {
+  handleScroll: function () {
     let st = window.scrollY || document.documentElement.scrollTop;
-    if (st > state.lastScrollTop) {
+    if (st > this.state.lastScrollTop) {
       if (
-        st >= getRootFontSize() * 10 &&
-        !state.elements.menuBar?.classList.contains("maximize")
+        st >= this.getRootFontSize() * 10 &&
+        !this.state.elements.menuBar?.classList.contains("maximize")
       ) {
-        state.elements.menuBar?.classList.add("hidden");
+        this.state.elements.menuBar?.classList.add("hidden");
       }
     } else {
-      if (!state.isAnchorClick) {
-        state.elements.menuBar?.classList.remove("hidden");
+      if (!this.state.isAnchorClick) {
+        this.state.elements.menuBar?.classList.remove("hidden");
       }
     }
-    state.lastScrollTop = st <= 0 ? 0 : st;
-  }
+    this.state.lastScrollTop = st <= 0 ? 0 : st;
+  },
 
-  function handleAnchorClick(e) {
+  handleAnchorClick: function (e) {
     if (e.target.tagName === "A") {
       const href = e.target.getAttribute("href");
       if (href && href.startsWith("#")) {
-        state.isAnchorClick = true;
+        this.state.isAnchorClick = true;
         setTimeout(() => {
-          state.isAnchorClick = false;
+          this.state.isAnchorClick = false;
         }, 1000);
       }
     }
-  }
+  },
 
-  function initialize() {
-    initializeDOMElements();
-    setupEventListeners();
-  }
+  initialize: function () {
+    this.initializeDOMElements();
+    this.setupEventListeners();
+  },
+};
 
-  // Public API
-  return {
-    initialize,
-    getRootFontSize,
-    maximizeBurger,
-    minimizeBurger,
-    toggleBurger,
-    hideNav,
-    showNav,
-  };
-})();
-
-// Initialize only in browser environment
-if (typeof window !== "undefined") {
-  MenuScroll.initialize();
-}
+console.log(MenuScroll);
+MenuScroll.initialize();
