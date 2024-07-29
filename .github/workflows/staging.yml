@@ -58,6 +58,7 @@ jobs:
 
   E2E:
     runs-on: ubuntu-latest
+    container: mcr.microsoft.com/playwright:next-jammy
     needs: deploy
     env:
       DEPLOYMENT_URL: ${{ needs.deploy.outputs.deployment_url }}
