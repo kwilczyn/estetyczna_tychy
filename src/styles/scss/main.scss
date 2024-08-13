@@ -326,6 +326,18 @@ main {
     }
   }
 
+  #order {
+    .order__order-container {
+      width: 100%;
+      iframe {
+        margin-top: $mainMargin;
+        display: none;
+        width: 100%;
+        border: 0;
+      }
+    }
+  }
+
   #contact {
     text-align: center;
     width: 100%;

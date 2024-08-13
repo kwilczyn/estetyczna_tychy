@@ -9,6 +9,7 @@ fetch("./media/text/main.json")
   .then((data) => {
     about_us(data.about_us);
     pricing(data.pricing);
+    order(data.about_us);
     contact(data.contact);
     footer(data);
   });
@@ -41,6 +42,43 @@ function pricing(data) {
       prepare_element(li, "span", data[i].services[j].name);
       prepare_element(li, "span", data[i].services[j].price);
     }
+  }
+}
+
+function order(data) {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].widget) {
+      let doc = prepare_element("#order", "div", null);
+      doc.classList.add("order__order-container");
+      let header = prepare_element(doc, "h2", data[i].doctor);
+      let iframe = prepare_element(doc, "iframe");
+      iframe.setAttribute(
+        "sandbox",
+        "allow-forms allow-scripts allow-same-origin allow-popups"
+      );
+      iframe.setAttribute("loading", "lazy");
+      if (data[i].widget.proasisst) {
+        iframe.setAttribute("src", data[i].widget.proasisst);
+        iframe.setAttribute("height", 1100);
+        iframe.setAttribute("width", 320);
+        iframe.setAttribute("allowtransparency", "true");
+        iframe.setAttribute("overflow", "hidden");
+        iframe.setAttribute("scrolling", "no");
+      }
+      if (data[i].widget.zl) {
+        iframe.setAttribute("height", 688);
+        iframe.setAttribute("src", data[i].widget.zl);
+      }
+      header.addEventListener("click", () => toggleOrder(iframe));
+    }
+  }
+}
+
+function toggleOrder(order) {
+  if (order.classList.contains("visible")) {
+    order.classList.remove("visible");
+  } else {
+    order.classList.add("visible");
   }
 }
 
