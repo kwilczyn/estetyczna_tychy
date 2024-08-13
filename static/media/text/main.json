@@ -24,67 +24,116 @@
       "category": "Zabiegi z użyciem toksyny botulinowej",
       "services": [
         {
-          "name": "Botoks - zmarszczki mimiczne czoła",
-          "price": "450 zł"
-        },
-        {
-          "name": "Botoks - kurze łapki",
-          "price": "500 zł"
-        },
-        {
-          "name": "Botoks - bruzdy nosowo-wargowe",
+          "name": "okolica (kurze łapki, poziome zmarszczki czoła lub zmarszczki między brwiami)",
           "price": "600 zł"
-        }
-      ]
-    },
-    {
-      "category": "Wypełniacze",
-      "services": [
-        {
-          "name": "Wypełnianie ust kwasem hialuronowym",
-          "price": "800 zł"
         },
         {
-          "name": "Wypełnianie bruzd nosowo-wargowych",
+          "name": "2 okolice w czasie jednego zabiegu",
           "price": "900 zł"
         },
         {
-          "name": "Modelowanie policzków",
+          "name": "3 okolice w czasie jednego zabiegu",
+          "price": "1110 zł"
+        },
+        {
+          "name": "Nadpotliwość pach",
+          "price": "1500 zł"
+        }
+      ]
+    },
+    {
+      "category": "Zabiegi z kwasem hialuronowym",
+      "services": [
+        {
+          "name": "Różne okolice w tym zabieg w obrębie ust",
+          "price": "1100 zł"
+        },
+        {
+          "name": "Volumetria twarzy",
+          "price": "od 2000 zł"
+        }
+      ]
+    },
+    {
+      "category": "Bioregeneracja",
+      "services": [
+        {
+          "name": "Bioregeneracja kwasem hialuronowym Skinboosters",
+          "price": "700 zł"
+        },
+        {
+          "name": "Bioregeneracja kwasem hialuronowym Skinboosters seria 3 zabiegów",
+          "price": "1900 zł"
+        },
+        {
+          "name": "Bioregeneracja z kwasem polimlekowym Sculptra pojedynczy zabieg",
+          "price": "1650 zł"
+        },
+        {
+          "name": "Sculptra seria II zabieg",
+          "price": "1550 zł"
+        },
+        {
+          "name": "Sculptra seria III zabieg",
+          "price": "1450 zł"
+        },
+        {
+          "name": "Bioregeneracja Osocze bogatopłytkowe (twarz, dekolt, skóra głowy)",
+          "price": "700 zł"
+        },
+        {
+          "name": "Bioregeneracja kwasem hialuronowym Profhilo I zabieg",
           "price": "1200 zł"
+        },
+        {
+          "name": "Bioregeneracja kwasem hialuronowym Profhilo II zabieg",
+          "price": "1000 zł"
+        },
+        {
+          "name": "Bioregeneracja kwasem hialuronowym Viscoderm 1 amp (wypełnienie drobnych zmarszczek)",
+          "price": "1000 zł"
+        },
+        {
+          "name": "Bioregeneracja kwasem hialuronowym Viscoderm 2 amp",
+          "price": "1800 zł"
+        },
+        {
+          "name": "Fibryna",
+          "price": "700 zł"
+        },
+        {
+          "name": "Mezoterapia mikroigłowa",
+          "price": "450 zł"
+        },
+        {
+          "name": "Mezoterapia igłowa",
+          "price": "600 zł"
+        },
+        {
+          "name": "Peeling chemiczny",
+          "price": "450 zł"
+        },
+        {
+          "name": "Zabieg bankietowy (peeling Oxyage i ampułka z DMAE)",
+          "price": "500 zł"
         }
       ]
     },
     {
-      "category": "Mezoterapia",
+      "category": "Nici liftingujące",
       "services": [
         {
-          "name": "Mezoterapia igłowa twarzy",
-          "price": "350 zł"
-        },
-        {
-          "name": "Mezoterapia igłowa skóry głowy",
-          "price": "400 zł"
-        },
-        {
-          "name": "Mezoterapia bezigłowa",
-          "price": "250 zł"
+          "name": "Nici liftingujące Aptos",
+          "price": "2500 zł"
         }
       ]
     },
     {
-      "category": "Peelingi medyczne",
+      "category": "Konsultacja lekarska",
       "services": [
         {
-          "name": "Peeling migdałowy",
-          "price": "200 zł"
-        },
-        {
-          "name": "Peeling glikolowy",
+          "name": "Konsultacja lekarska 0,5-godzinna",
           "price": "250 zł"
-        },
-        {
-          "name": "Peeling salicylowy",
-          "price": "220 zł"
         }
       ]
     }
