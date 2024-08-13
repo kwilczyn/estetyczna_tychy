@@ -7,8 +7,9 @@
     },
     {
       "doctor": "Lek. Marta Tomica",
-      "description": "Dr Anna Kowalska jest cenionym specjalistą medycyny estetycznej z 15-letnim doświadczeniem. Ukończyła studia medyczne na Uniwersytecie Medycznym w Warszawie, a następnie odbyła specjalizację z dermatologii. Swoją praktykę w zakresie medycyny estetycznej rozpoczęła w 2008 roku, systematycznie poszerzając wiedzę poprzez uczestnictwo w międzynarodowych konferencjach i szkoleniach. Dr Kowalska jest ekspertem w dziedzinie zabiegów anti-aging, modelowania twarzy i ciała oraz laseroterapii. Prowadzi własną klinikę w centrum Krakowa, gdzie wprowadza najnowocześniejsze technologie i metody leczenia. Jest również aktywnym członkiem Polskiego Towarzystwa Medycyny Estetycznej i Anti-Aging.",
-      "image": "marta.jpg"
+      "description": "Absolwentka Collegium Medicum UJ, łączy specjalizację w radiologii z pasją do medycyny estetycznej. Ukończyła studia podyplomowe w tej dziedzinie i pracuje w gabinecie BG Medycyna Estetyczna. Jej artystyczne zainteresowania znajdują odzwierciedlenie w dążeniu do naturalnych, subtelnych efektów zabiegów. Lek. Marta Tomica zapewnia pacjentom przyjazną atmosferę, dokładną analizę potrzeb i szczegółowe omówienie procedur. Stale poszerza swoją wiedzę poprzez kursy i szkolenia. Prywatnie ceni podróże, spacery z narzeczonym i psem oraz spotkania z przyjaciółmi.",
+      "image": "marta.jpg",
+      "widget": {
     }
   ],
   "pricing": [
