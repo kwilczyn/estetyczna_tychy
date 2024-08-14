@@ -4,7 +4,8 @@ let prologSection = document.querySelector("#prolog");
 let mediaRoot = "./media/images/";
 
 const imageDirectories = {
-  certificates: ["cert1.jpeg", "cert2.jpeg", "cert3.jpeg"],
+  numOfCerts: 19,
+  certificates: "cert_",
   opinions: ["op1.png", "op2.png"],
   prolog: [
     "about1.jpg",
@@ -20,8 +21,17 @@ const imageDirectories = {
 };
 
 function read_images(dir) {
-  console.log(`${imageDirectories}`);
-  const images = imageDirectories[dir];
+  let images = imageDirectories[dir];
+  if (dir === "certificates") {
+    images = Array();
+    for (let i = 1; i <= imageDirectories["numOfCerts"]; i++) {
+      images.push(
+        imageDirectories["certificates"] +
+          i.toString().padStart(3, "0") +
+          ".webp"
+      );
+    }
+  }
   return images.map((fileName) => `${mediaRoot}${dir}/${fileName}`);
 }
 
