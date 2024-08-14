@@ -47,11 +47,14 @@ function pricing(data) {
 }
 
 function order(data) {
+  prepare_element("#order", "h2", "Wybierz swojego lekarza:");
   for (let i = 0; i < data.length; i++) {
     if (data[i].widget) {
       let doc = prepare_element("#order", "div", null);
       doc.classList.add("order__order-container");
-      let header = prepare_element(doc, "h2", data[i].doctor);
+      let header = prepare_element(doc, "h3", data[i].doctor);
+      const loadingIndicator = prepare_element(doc, "div", null);
+      loadingIndicator.classList.add("loading-indicator");
       let iframe = prepare_element(doc, "iframe");
       iframe.setAttribute(
         "sandbox",
@@ -70,15 +73,25 @@ function order(data) {
         iframe.setAttribute("height", 688);
         iframe.setAttribute("src", data[i].widget.zl);
       }
-      header.addEventListener("click", () => toggleOrder(iframe));
+      iframe.onload = function () {
+        loadingIndicator.style.display = "none";
+        iframe.loaded = true;
+      };
+      header.addEventListener("click", () =>
+        toggleOrder(iframe, loadingIndicator)
+      );
     }
   }
 }
 
-function toggleOrder(order) {
+function toggleOrder(order, loadingIndicator) {
   if (order.classList.contains("visible")) {
+    loadingIndicator.style.display = "none";
     order.classList.remove("visible");
   } else {
+    if (!order.loaded) {
+      loadingIndicator.style.display = "block";
+    }
     order.classList.add("visible");
   }
 }
