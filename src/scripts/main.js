@@ -40,7 +40,8 @@ function pricing(data) {
         null
       );
       prepare_element(li, "span", data[i].services[j].name);
-      prepare_element(li, "span", data[i].services[j].price);
+      const price = prepare_element(li, "span", data[i].services[j].price);
+      price.classList.add("price");
     }
   }
 }
