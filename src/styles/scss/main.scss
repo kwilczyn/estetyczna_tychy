@@ -38,8 +38,38 @@ body {
   }
 }
 
+.loading-indicator {
+  display: none;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  font-size: 48px;
+  // content: "";
+  color: white;
+  height: 30px;
+  width: 30px;
+  background: transparent;
+  border-radius: 10%;
+  border: 25px inset $majorColor;
+  animation: load2 1s infinite ease-in-out;
+}
+
+@keyframes load2 {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-50%) rotatez(180deg);
+    border-radius: 55%;
+  }
+  100% {
+    transform: translateX(-50%) rotatez(360deg);
+  }
+}
+
 h1,
-h2 {
+h2,
+h3 {
   font-family: $headerFont;
   font-weight: 600;
   font-optical-sizing: auto;
@@ -360,7 +390,25 @@ main {
 
   #order {
     .order__order-container {
+      position: relative;
       width: 100%;
+
+      h3 {
+        display: inline-block;
+        cursor: pointer;
+        text-align: center;
+        background-color: $majorColor;
+        color: black;
+        border-radius: 10px;
+        padding: 0.5rem;
+        box-shadow: 1px 1px 3px 1px black;
+        width: 229px;
+
+        &:hover {
+          box-shadow: 1px 1px 3px 1px black inset;
+        }
+      }
+
       iframe {
         margin-top: $mainMargin;
         display: none;
