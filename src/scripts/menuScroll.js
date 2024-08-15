@@ -106,5 +106,4 @@ export const MenuScroll = {
   },
 };
 
-console.log(MenuScroll);
 MenuScroll.initialize();
