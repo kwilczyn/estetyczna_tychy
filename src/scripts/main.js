@@ -116,6 +116,7 @@ function contact(data) {
 }
 
 function footer(data) {
+  prepare_element("footer", "span", "Zapraszamy na nasze social media");
   let social_media = prepare_element("footer", "div", null);
   social_media.classList.add("social-media-container");
   let facebook_link = prepare_element(social_media, "a", null);
