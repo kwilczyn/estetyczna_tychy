@@ -1,3 +1,5 @@
+import { prepare_element } from "./utils.js";
+
 import "@styles/scss/main.scss";
 
 let imagePath = "./media/images/";
@@ -7,6 +9,7 @@ fetch("./media/text/main.json")
     return response.json();
   })
   .then((data) => {
+    console.log("Jestem to pierwszy raz");
     about_us(data.about_us);
     pricing(data.pricing);
     order(data.about_us);
@@ -132,17 +135,4 @@ function footer(data) {
     "src",
     `${imagePath}instagram.png`
   );
-}
-
-function prepare_element(selector, element_type, header_text) {
-  let parent = null;
-  if (typeof selector === "string") {
-    parent = document.querySelector(selector);
-  } else {
-    parent = selector;
-  }
-  let element = document.createElement(element_type);
-  element.textContent = header_text;
-  parent.appendChild(element);
-  return element;
 }
