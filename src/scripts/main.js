@@ -9,7 +9,6 @@ fetch("./media/text/main.json")
     return response.json();
   })
   .then((data) => {
-    console.log("Jestem to pierwszy raz");
     about_us(data.about_us);
     pricing(data.pricing);
     order(data.about_us);
