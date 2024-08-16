@@ -1,6 +1,7 @@
 $zMenuLevel: 100;
 $zDropDownLevel: $zMenuLevel - 1;
 $majorColor: rgb(216, 160, 166);
+$majorLighterColor: rgb(238, 214, 217);
 $mainMargin: 1rem;
 $sliderHeight: 15rem;
 $sectionGap: 2rem;
@@ -439,14 +440,17 @@ main {
         cursor: pointer;
         text-align: center;
         background-color: $majorColor;
+        background-color: $majorLighterColor;
         color: black;
         border-radius: 10px;
         padding: 0.5rem;
-        box-shadow: 1px 1px 3px 1px black;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
         width: 229px;
 
         &:hover {
-          box-shadow: 1px 1px 3px 1px black inset;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px inset;
         }
       }
 
