@@ -19,6 +19,7 @@ const imageDirectories = {
     "gab1.webp",
     "gab2.webp",
     "gab3.webp",
+    "gab4.webp",
   ],
 };
 
