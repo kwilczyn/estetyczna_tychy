@@ -59,7 +59,7 @@ function slideShow(slider, slidesSelector) {
     currentImageIndex = (currentImageIndex + 1) % slides.length;
     slides[currentImageIndex].classList.add("active");
   }
-  setInterval(showNextImage, 3000);
+  setInterval(showNextImage, 4000);
 }
 
 function createOpinionSlider(parent, opinions) {
