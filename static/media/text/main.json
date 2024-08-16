@@ -24,7 +24,7 @@
       "category": "Zabiegi z użyciem toksyny botulinowej",
       "services": [
         {
-          "name": "okolica (kurze łapki, poziome zmarszczki czoła lub zmarszczki między brwiami)",
+          "name": "Okolica (kurze łapki, poziome zmarszczki czoła lub zmarszczki między brwiami)",
           "price": "600 zł"
         },
         {
@@ -66,7 +66,7 @@
           "price": "1900 zł"
         },
         {
-          "name": "Bioregeneracja z kwasem polimlekowym Sculptra pojedynczy zabieg",
+          "name": "Bioregeneracja kwasem polimlekowym Sculptra pojedynczy zabieg",
           "price": "1650 zł"
         },
         {
@@ -79,6 +79,10 @@
         },
         {
           "name": "Bioregeneracja Osocze bogatopłytkowe (twarz, dekolt, skóra głowy)",
+          "price": "700 zł"
+        },
+        {
+          "name": "Bioregeneracja fibryna bogatopłytkowa",
           "price": "700 zł"
         },
         {
@@ -96,10 +100,6 @@
         {
           "name": "Bioregeneracja kwasem hialuronowym Viscoderm 2 amp",
           "price": "1800 zł"
-        },
-        {
-          "name": "Fibryna",
-          "price": "700 zł"
         },
         {
           "name": "Mezoterapia mikroigłowa",
