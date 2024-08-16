@@ -198,13 +198,11 @@ nav {
         padding: 0.5rem;
         white-space: nowrap;
         background-color: white;
-        transition: background-color 500ms;
+        transition: color 250ms;
       }
       a:hover,
       a:active {
-        color: white;
-        background-color: $majorColor;
-        border-radius: 5px;
+        color: $majorColor;
       }
       ul {
         display: flex;
