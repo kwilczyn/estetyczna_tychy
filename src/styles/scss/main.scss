@@ -89,7 +89,7 @@ h2 {
   justify-content: space-between;
   align-items: center;
   @media (min-width: $desktopTrigger) {
-    box-shadow: 1px 1px 20px 0px black;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 }
 
