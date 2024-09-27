@@ -26,10 +26,10 @@ The desktop version of the layout:
 Please check the app in action using this link: [Live preview](https://kwilczyn.github.io/estetyczna_tychy/)
 
 # Stack
-The app was written in **Vanilla JS** and uses the **SCSS** preprocessor.
-Everything is wrapped by the **Vite** builder.
-Unit tests: **Vitest**
-E2E tests: **Playwright**
+The app was written in **Vanilla JS** and uses the **SCSS** preprocessor.  
+Everything is wrapped by the **Vite** builder.  
+Unit tests: **Vitest**  
+E2E tests: **Playwright**  
 
 ## Customize configuration
 See [Vite Configuration Reference](https://vitejs.dev/config/).
